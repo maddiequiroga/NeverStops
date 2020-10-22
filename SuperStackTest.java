@@ -14,15 +14,16 @@ public class SuperStackTest {
 		fail("Not yet implemented");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testIsEmpty() {
 		// create an empty stack and check if it is empty
 		// add a few elements and check if it is empty
-		SuperStack<Integer> stack = new SuperStack<>(1);
+		SuperStack< Integer >stack = new SuperStack<Integer>(1);
 		boolean result = stack.isEmpty();
 		assertTrue(result);
 		
-		stack.push(0);
+		stack.push(new Integer(0));
 		result = stack.isEmpty();
 		assertFalse(result);
 		

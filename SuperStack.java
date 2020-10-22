@@ -1,23 +1,25 @@
 
-public class SuperStack {
+public class SuperStack<T> {
 
 	private T[] items;
 	private int top;
 	
+	@SuppressWarnings("unchecked")
 	public SuperStack(int size){
-		items = (T[])new Object(size);
+		items = (T[]) new Object[size];
+		this.items = items;
 	}
 	
 	
 	public boolean isEmpty() {
-	return true;
+		return top == 0;
 }
 
 	public boolean isFull() {
 	return true;
 }
 
-	public boolean push() {
+	public boolean push(T item) {
 	return true;
 }
 
